@@ -14,6 +14,7 @@ MongoClient.connect(connectionString, function(err, db) {
     }
 
     server.app.db = db;
+    console.log('Connected to Mongo');
 });
 
 server.route(require('./routes'));
