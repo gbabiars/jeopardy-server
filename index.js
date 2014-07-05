@@ -11,4 +11,6 @@ MongoClient.connect('mongodb://127.0.0.1:27017/jeopardy', function(err, db) {
     server.app.db = db;
 });
 
+server.route(require('./routes'));
+
 server.start();
