@@ -2,6 +2,14 @@ var routes = [];
 
 routes.push({
     method: 'GET',
+    path: '/',
+    handler: function(req, reply) {
+        reply('This is Jeopardy');
+    }
+});
+
+routes.push({
+    method: 'GET',
     path: '/api/games',
     handler: require('./handlers/games/find')
 });
