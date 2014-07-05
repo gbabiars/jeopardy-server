@@ -1,9 +1,14 @@
 var Hapi = require('Hapi'),
     MongoClient = require('mongodb').MongoClient;
 
-var server = Hapi.createServer('localhost', 8000, { cors: true });
+var port = process.env.PORT || 8000;
+var host = process.env.HOST || 'localhost';
 
-MongoClient.connect('mongodb://127.0.0.1:27017/jeopardy', function(err, db) {
+var server = Hapi.createServer(host, port, { cors: true });
+
+var connectionString = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/jeopardy';
+
+MongoClient.connect(connectionString, function(err, db) {
     if(err) {
         throw err;
     }
@@ -13,4 +18,6 @@ MongoClient.connect('mongodb://127.0.0.1:27017/jeopardy', function(err, db) {
 
 server.route(require('./routes'));
 
-server.start();
+server.start(function() {
+    console.log('Server started @ ' + server.info.uri);
+});
