@@ -1,0 +1,25 @@
+{
+  "name": "jeopardy_server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "hapi": "^6.0.2",
+    "lodash": "^2.4.1",
+    "mongodb": "^1.4.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gbabiars/jeopardy-server.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/gbabiars/jeopardy-server/issues"
+  },
+  "homepage": "https://github.com/gbabiars/jeopardy-server"
+}
