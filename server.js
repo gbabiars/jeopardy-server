@@ -1,4 +1,4 @@
-var Hapi = require('Hapi');
+var Hapi = require('hapi');
 //    MongoClient = require('mongodb').MongoClient;
 
 var port = parseInt(process.env.PORT) || 8000;
