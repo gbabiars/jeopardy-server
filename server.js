@@ -2,7 +2,7 @@ var Hapi = require('hapi');
 //    MongoClient = require('mongodb').MongoClient;
 
 var port = parseInt(process.env.PORT) || 8000;
-var host = process.env.HOST || 'localhost';
+var host = '0.0.0.0';
 
 var server = Hapi.createServer(host, port, { cors: true });
 
